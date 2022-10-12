@@ -1,13 +1,26 @@
-function buttonLight() {
-  let btn = document.querySelector("button--dark");
-  btn.classList.toggle("button");
-}
-function bodyLight() {
-  let body = document.querySelector("body");
-  body.classList.toggle("body--dark");
-}
-function changeTitle() {
-  if ("button--dark" === true) {
+const button = document.querySelector("button");
+
+/*button.addEventListener("click", function () {
+  if (document.body.classList.contains("bodydark")) {
+    console.log("darktheme");
+    console.log("switching to light theme");
+    document.title = "Good Morning";
+    document.body.classList.remove("bodydark");
+  } else {
+    console.log("lighttheme");
+    console.log("switching To Dark Theme");
     document.title = "Good Night";
+    document.body.classList.add("bodydark");
   }
-}
+  console.log(button);
+});*/
+
+button.addEventListener("click", function () {
+  document.body.classList.toggle("bodydark");
+  if (document.body.classList.contains("bodydark")) {
+    document.title = "Good Night";
+  } else {
+    document.title = "Good Morning";
+  }
+  console.log(button);
+});
